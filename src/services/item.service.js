@@ -15,6 +15,12 @@ module.exports = {
     return item;
   },
 
+  async getByUniqueId(id) {
+    const item = await Item.find({ id });
+
+    return item;
+  },
+
   async getByQuery(query) {
     const items = await Item.find({ title: new RegExp(query, 'i') });
 
