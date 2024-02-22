@@ -88,9 +88,6 @@ async function onListening() {
     app
       .listen(port, HOST, () => {
         console.log(`App is running at ${HOST}:${port}`);
-      })
-      .on('error', (err) => {
-        console.log(`An error has ocurred: ${err}`);
       });
 
   } catch (err) {

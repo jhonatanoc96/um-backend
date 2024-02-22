@@ -1,3 +1,4 @@
+const cors = require('cors');
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -8,6 +9,8 @@ const indexRouter = require('./routes/index');
 const itemRouter = require('./routes/item.routes');
 
 const app = express();
+
+app.use(cors());
 
 app.use(logger('dev'));
 app.use(express.json());
