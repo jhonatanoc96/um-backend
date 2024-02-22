@@ -16,7 +16,7 @@ module.exports = {
   },
 
   async getByUniqueId(id) {
-    const item = await Item.find({ id });
+    const item = await Item.findOne({ id });
 
     return item;
   },
