@@ -85,10 +85,10 @@ async function onListening() {
     await mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
     console.log('Connected to the database successfully');
 
-    app
-      .listen(port, HOST, () => {
-        console.log(`App is running at ${HOST}:${port}`);
-      });
+    // app
+    //   .listen(port, HOST, () => {
+    //     console.log(`App is running at ${HOST}:${port}`);
+    //   });
 
   } catch (err) {
     console.error(`Error to database connect: ${err}`);
