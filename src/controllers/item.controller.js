@@ -17,6 +17,14 @@ module.exports = {
     return res.status(200).send({ item });
   },
 
+  async getItemByUniqueId(req, res, next) {
+    const { id } = req.params;
+
+    const item = await itemService.getByUniqueId(id);
+
+    return res.status(200).send({ item });
+  },
+
   async getItemsByQuery(req, res, next) {
     const { query } = req.params;
 
